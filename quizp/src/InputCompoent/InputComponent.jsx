@@ -13,7 +13,7 @@ export default function InputComponent() {
       <div className={`input-container ${isActive ? "active" : ""}`}>
         <input
           type="text"
-          placeholder="Type something..."
+          placeholder="Type something...like udaypingili"
           onFocus={() => setIsActive(true)}
         />
       </div>
