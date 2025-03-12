@@ -1,0 +1,57 @@
+// General styling
+.container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    transition: background 0.3s ease-in-out;
+  
+    &.dimmed {
+      background: rgba(0, 0, 0, 0.5);
+    }
+  }
+  
+  // Overlay effect
+  .overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.3s ease-in-out;
+    pointer-events: none;
+  
+    &.show {
+      background: rgba(0, 0, 0, 0.5);
+      pointer-events: all;
+    }
+  }
+  
+  // Floating input styling
+  .input-container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.4s ease-in-out;
+    
+    &.active {
+      top: 20px;
+      bottom: auto;
+    }
+  
+    input {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      outline: none;
+      width: 250px;
+      transition: box-shadow 0.3s;
+  
+      &:focus {
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+  
